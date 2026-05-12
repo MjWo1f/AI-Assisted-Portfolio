@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malachi Wolf | IT Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#0a0f1c;
+  --card:#111827;
+  --accent:#4f46e5;
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);}
+
+header{
+position:fixed;width:100%;top:0;padding:20px 60px;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(10,15,28,0.8);backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav ul{display:flex;gap:30px;list-style:none;}
+nav a{text-decoration:none;color:var(--muted);transition:.3s;}
+nav a:hover{color:var(--text);}
+
+.hero{
+height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+}
+
+h1{font-size:3.5rem;font-weight:700;}
+h2{font-size:2rem;margin-bottom:20px;}
+.subtitle{margin-top:10px;color:var(--muted);}
+
+.btns{margin-top:30px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center;}
+.btn{padding:12px 28px;border-radius:999px;text-decoration:none;font-weight:600;cursor:pointer;}
+.primary{background:var(--accent);color:white;}
+.secondary{border:1px solid var(--accent);color:var(--accent);}
+.btn:hover{opacity:0.8;}
+
+section{opacity:0;transform:translateY(50px);transition:all .8s ease;padding:80px 20px;}
+section.show{opacity:1;transform:translateY(0);}
+
+.container{max-width:1000px;margin:auto;}
+.card{background:var(--card);padding:30px;border-radius:20px;margin-bottom:30px;}
+
+.project{margin-bottom:20px;}
+.project h3{margin-bottom:5px;}
+.project p{color:var(--muted);}
+
+.skills .bar{height:8px;background:#1e293b;border-radius:10px;overflow:hidden;margin-bottom:15px;}
+.fill{height:100%;width:0;background:var(--accent);transition:width 1.5s;}
+
+footer{text-align:center;padding:40px 20px;color:var(--muted);}
+
+.about-content p{color:var(--muted);line-height:1.8;margin-bottom:20px;}
+
+.contact-form{max-width:600px;margin:0 auto;}
+.contact-form input,.contact-form textarea{width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;background:#1e293b;color:white;font-family:Inter,sans-serif;}
+.contact-form button{padding:12px 28px;background:var(--accent);color:white;border:none;border-radius:10px;cursor:pointer;font-weight:600;}
+.contact-form button:hover{opacity:0.8;}
+
+.contact-info{margin-top:30px;text-align:center;}
+.contact-info a{color:var(--accent);text-decoration:none;}
+
+@media(max-width:768px){
+header{padding:20px 30px;}
+nav ul{gap:20px;flex-wrap:wrap;}
+h1{font-size:2.5rem;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div><strong>Malachi Wolf</strong></div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<img src="assets/images/headshot.jpg" alt="Malachi Wolf" style="width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid #4f46e5;box-shadow:0 15px 40px rgba(79,70,229,0.45);margin-bottom:30px;">
+
+<h1>Malachi Wolf</h1>
+<p class="subtitle" style="max-width:650px;font-size:1.05rem;line-height:1.7;">
+Information Technology student at Winston-Salem State University with a passion for software development, problem-solving, and creating impactful digital solutions. Focused on building modern applications, improving user experiences, and continuously expanding technical expertise through real-world projects and collaborative development.
+</p>
+
+<div class="btns">
+<a href="#projects" class="btn primary">Explore Projects</a>
+<a href="#resume" class="btn secondary">View Resume</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="card">
+<h2>About Me</h2>
+<div class="about-content">
+<p>My name is Malachi Wolf, and I am an Information Technology student at Winston-Salem State University with a strong passion for technology, software development, and problem-solving. I enjoy creating digital solutions that are both functional and visually appealing while continuing to expand my technical knowledge through real-world experience.</p>
+
+<p>I have experience working on client websites, Java applications, and collaborative development projects. My interests include software engineering, web development, artificial intelligence, and building applications that improve user experiences.</p>
+
+<p>Outside of academics, I focus on personal growth, leadership, and continuously improving my technical skill set to prepare for a successful career in the technology industry.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="card">
+<h2>Projects</h2>
+
+<div class="project">
+<h3>Client Website Development</h3>
+<p>Designed and deployed a live website for a real client, focusing on usability, performance, and clean design.</p>
+<p><a href="https://upliftmissioninc.com" target="_blank" style="color:#4f46e5;text-decoration:none;font-weight:600;">View Live Site →</a></p>
+</div>
+
+<div class="project">
+<h3>Electronic Gradebook</h3>
+<p>Developed a Java-based electronic gradebook system that manages student grades, assignment tracking, averages, and identifies struggling students through automated reporting features.</p>
+<p><a href="#" style="color:#4f46e5;text-decoration:none;font-weight:600;">Java Application Project</a></p>
+</div>
+
+<div class="project">
+<h3>Hackathon Project — AI Budget Assistant</h3>
+<p>Collaborated on an AI-powered budgeting assistant designed to help users track spending habits, manage expenses, and improve financial planning through intelligent recommendations.</p>
+<p><a href="https://github.com/jpitt2004/AI-Budget-Assistant" target="_blank" style="color:#4f46e5;text-decoration:none;font-weight:600;">View GitHub Repository →</a></p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="skills" class="skills">
+<div class="container">
+<div class="card">
+<h2>Technical Skills</h2>
+
+<p>Java</p>
+<div class="bar"><div class="fill" data-width="80%"></div></div>
+
+<p>Python</p>
+<div class="bar"><div class="fill" data-width="75%"></div></div>
+
+<p>SQL</p>
+<div class="bar"><div class="fill" data-width="70%"></div></div>
+
+<p>Problem Solving</p>
+<div class="bar"><div class="fill" data-width="85%"></div></div>
+
+</div>
+</div>
+</section>
+
+<section id="resume">
+<div class="container">
+<div class="card">
+<h2>Resume</h2>
+<p><strong>Professional Summary:</strong> Motivated Information Technology student with strong foundations in programming, systems, and analytical problem-solving. Focused on applying technical skills to real-world solutions and continuous growth.</p>
+<p><strong>Skills:</strong> Java, Python, SQL, Data Analysis, Software Development, IT Support</p>
+<p><strong>Education:</strong> Winston-Salem State University (Expected 2027)</p>
+
+<a href="assets/Malachi_Wolf_Resume.pdf" class="btn primary" target="_blank">Download Resume</a>
+</div>
+</div>
+</section>
+
+<section id="highlights">
+<div class="container">
+<div class="card" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:center;">
+<div>
+<h2 style="color:#4f46e5;font-size:2rem;">3+</h2>
+<p>Featured Projects</p>
+</div>
+<div>
+<h2 style="color:#4f46e5;font-size:2rem;">2027</h2>
+<p>Expected Graduation</p>
+</div>
+<div>
+<h2 style="color:#4f46e5;font-size:2rem;">3.19</h2>
+<p>Current GPA</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="card">
+<h2>Contact Me</h2>
+<p style="text-align:center;color:var(--muted);margin-bottom:30px;">If you would like to connect, collaborate, or discuss opportunities, feel free to reach out.</p>
+
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="6" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<div class="contact-info">
+<p style="margin-top:30px;">LinkedIn: <a href="https://www.linkedin.com/in/malachi-wolf-a30121265" target="_blank">www.linkedin.com/in/malachi-wolf-a30121265</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Malachi Wolf</p>
+</footer>
+
+<script>
+const sections=document.querySelectorAll('section');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+entry.target.querySelectorAll('.fill').forEach(f=>{
+f.style.width=f.dataset.width;
+});
+}
+});
+},{threshold:.2});
+sections.forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
